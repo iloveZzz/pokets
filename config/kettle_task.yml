@@ -1,0 +1,52 @@
+task_list: #自定义的属性和值
+  task:
+      - size: 1 #开启3个线程
+        name: pocketConcierge #pocket商户获取
+        cron: 0 00 1 * * ?
+      - size: 0
+        name: get_pocket_pricejson #pocket商户获取pricejson
+        cron: 0 30 6 * * ?
+      - size: 0
+        name: trans_pocket_pricejson #pocket同步pricejson
+        cron: 0 30 7 * * ?
+      - size: 0
+        name: getAsoviewBusList #Asoview商户同步
+        cron: 0 30 2 * * ?
+      - size: 2 #开启5个线程
+        name: getAsoviewBusCourses #Asoview_course同步
+        cron: 0 00 3 * * ?
+        month_count: 1
+      - size: 0
+        name: getAsoviewModelPriceJson #Asoview商户model的price_json同步
+        cron: 0 00 6 * * ?
+  quartz:
+      - job_name: pocketConcierge
+        trigger_name: pocketConcierge_trigger
+        job_group: pocket_boot_Group
+        trigger_group: pocket_boot_EventGroup
+        job_mapper: com.xianbei.pocket.service.dataconver.task.execJobs.ConciergeJob
+      - job_name: get_pocket_pricejson
+        trigger_name: get_pocket_pricejson_trigger
+        job_group: pocket_boot_Group
+        trigger_group: pocket_boot_EventGroup
+        job_mapper: com.xianbei.pocket.service.dataconver.task.execJobs.ConciergePirceJsonJob
+      - job_name: trans_pocket_pricejson
+        trigger_name: trans_pocket_pricejson_trigger
+        job_group: pocket_boot_Group
+        trigger_group: pocket_boot_EventGroup
+        job_mapper: com.xianbei.pocket.service.dataconver.task.execJobs.ConciergePirceJsonSynJob
+      - job_name: asoview_bussiness
+        trigger_name: asoview_bussiness_trigger
+        job_group: pocket_boot_Group
+        trigger_group: pocket_boot_EventGroup
+        job_mapper: com.xianbei.pocket.service.dataconver.task.execJobs.AsoviewBusJob
+      - job_name: asoview_course_list
+        trigger_name: asoview_course_list_trigger
+        job_group: pocket_boot_Group
+        trigger_group: pocket_boot_EventGroup
+        job_mapper: com.xianbei.pocket.service.dataconver.task.execJobs.AsoviewCourseJob
+      - job_name: price_json_list
+        trigger_name: price_json_list_trigger
+        job_group: pocket_boot_Group
+        trigger_group: pocket_boot_EventGroup
+        job_mapper: com.xianbei.pocket.service.dataconver.task.execJobs.AsoviewPriceJsonJob
