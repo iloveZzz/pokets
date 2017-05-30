@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class PocketMain {
     @Autowired
     private DataController dataController;
-    @RequestMapping("/task")
+     @RequestMapping("/task")
     public void home(String key) {
         dataController.excTable(key);
     }
