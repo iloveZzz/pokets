@@ -1,7 +1,7 @@
 task_list: #自定义的属性和值
   task:
       - size: 1 #开启3个线程
-        name: pocketConcierge #pocket商户获取
+        name: pocketConcierge #pocket商户获取1
         cron: 0 00 1 * * ?
       - size: 0
         name: get_pocket_pricejson #pocket商户获取pricejson
