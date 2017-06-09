@@ -1,5 +1,6 @@
 package com.xianbei.pocket.controller;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,13 +17,14 @@ import java.util.Map;
 @ResponseBody
 public class BitbucketController {
     @RequestMapping("pocket_hook")
-    public String pocket_hook( @RequestBody String rq, BindingResult bindingResult) {
+    public Map pocket_hook( @RequestBody String rq, BindingResult bindingResult) {
         Map<String, Object> map = new HashMap<String, Object>();
         System.out.println(rq);
         if (bindingResult.hasErrors()) {
             map.put("errorCode", "000001");
             map.put("errorMsg", bindingResult.getFieldError().getDefaultMessage());
         }
-        return rq;
+        Map m = JSON.parseObject(rq,HashMap.class);
+        return m;
     }
 }
