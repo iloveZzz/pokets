@@ -22,7 +22,9 @@ public class BitbucketController {
 
     @RequestMapping("pocket_hook")
     public String pocket_hook( @RequestBody String rq, BindingResult bindingResult) {
+
         Map<String, Object> map = new HashMap<String, Object>();
+
         if (bindingResult.hasErrors()) {
             map.put("errorCode", "000001");
             map.put("errorMsg", bindingResult.getFieldError().getDefaultMessage());
