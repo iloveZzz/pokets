@@ -1,4 +1,4 @@
-package com.xianbei.pocket.domain;
+package com.xianbei.pocket.pojo;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
