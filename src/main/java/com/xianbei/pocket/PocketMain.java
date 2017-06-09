@@ -1,6 +1,6 @@
 package com.xianbei.pocket;
 
-import com.xianbei.pocket.web.DataController;
+import com.xianbei.pocket.controller.DataController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class PocketMain {
     @Autowired
     private DataController dataController;
-     @RequestMapping("/task")
+    @RequestMapping("/task")
     public void home(String key) {
         dataController.excTable(key);
     }
