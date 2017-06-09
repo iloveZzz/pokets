@@ -1,4 +1,4 @@
-package com.xianbei.pocket.domain;
+package com.xianbei.pocket.pojo;
 
 /**
  * Created by zhudaoming on 2016/11/23.
