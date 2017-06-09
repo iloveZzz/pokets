@@ -6,7 +6,7 @@ spring:
         driver: com.mysql.jdbc.Driver
 mybatis:
     type-aliases-package: com.xianbei.pocket.model
-    type-handlers-package: com.xianbei.pocket.typehandler
+    type-handlers-package: com.xianbei.pocket.dao.typehandler
     configuration:
         map-underscore-to-camel-case: true
         default-fetch-size: 100

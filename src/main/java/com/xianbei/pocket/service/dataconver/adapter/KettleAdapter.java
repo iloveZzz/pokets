@@ -1,7 +1,7 @@
 package com.xianbei.pocket.service.dataconver.adapter;
 
-import com.xianbei.pocket.domain.MysqlEntity;
-import com.xianbei.pocket.domain.RepositoryEntity;
+import com.xianbei.pocket.pojo.MysqlEntity;
+import com.xianbei.pocket.pojo.RepositoryEntity;
 import org.pentaho.di.core.KettleEnvironment;
 import org.pentaho.di.core.Result;
 import org.pentaho.di.core.exception.KettleException;

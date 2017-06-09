@@ -1,11 +1,11 @@
 package com.xianbei.pocket.service.dataconver.command;
 
 import com.alibaba.fastjson.JSON;
-import com.xianbei.pocket.model.ItravelApiBusiness;
+import com.xianbei.pocket.entity.ItravelApiBusiness;
 import com.xianbei.pocket.service.dataconver.adapter.KettleAdapter;
 import com.xianbei.pocket.service.dataconver.task.TaskManager;
 import com.xianbei.pocket.service.dataconver.task.tasks.KettleAsoviewTask;
-import com.xianbei.pocket.typehandler.ItravelApiBusMapper;
+import com.xianbei.pocket.dao.typehandler.ItravelApiBusMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

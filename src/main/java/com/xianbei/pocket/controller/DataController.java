@@ -1,6 +1,6 @@
 package com.xianbei.pocket.controller;
 
-import com.xianbei.pocket.domain.TaskEntity;
+import com.xianbei.pocket.pojo.TaskEntity;
 import com.xianbei.pocket.service.dataconver.command.ConciergeKettle;
 import com.xianbei.pocket.service.dataconver.task.TimingTask;
 import org.slf4j.Logger;
@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**

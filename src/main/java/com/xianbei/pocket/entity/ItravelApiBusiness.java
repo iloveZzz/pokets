@@ -1,4 +1,4 @@
-package com.xianbei.pocket.model;
+package com.xianbei.pocket.entity;
 
 /**
  * Created by zhudaoming on 2017/4/19.

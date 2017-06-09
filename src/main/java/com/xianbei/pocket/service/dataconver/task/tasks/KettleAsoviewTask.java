@@ -1,7 +1,6 @@
 package com.xianbei.pocket.service.dataconver.task.tasks;
 
-import com.alibaba.fastjson.JSON;
-import com.xianbei.pocket.domain.TaskFt;
+import com.xianbei.pocket.pojo.TaskFt;
 import com.xianbei.pocket.service.dataconver.adapter.KettleAdapter;
 import com.xianbei.pocket.service.dataconver.command.AbstractCmdBase;
 import org.pentaho.di.core.Result;

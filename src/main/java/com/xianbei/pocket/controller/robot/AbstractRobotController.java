@@ -1,4 +1,4 @@
-package com.xianbei.pocket.robot;
+package com.xianbei.pocket.controller.robot;
 
 /**
  * Created by zhudaoming on 2017/6/9.

@@ -11,9 +11,8 @@ public class HttpUtil {
         HttpURLConnection urlConnection = (HttpURLConnection) new URL(
                 wikiSide).openConnection();
         urlConnection.setRequestMethod("GET");
-        urlConnection.setRequestProperty("content-type", "application/json;charset=utf-8");
-        urlConnection.setRequestProperty("X-Event-Key", "repo:push");
-        urlConnection.setRequestProperty("User-Agent", "Bitbucket-Webhooks/2.0");
+        urlConnection.setRequestProperty("content-type", "application/x-www-form-urlencoded;charset=utf-8");
+        urlConnection.setRequestProperty("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36");
         urlConnection.setDoInput(true);
         urlConnection.setDoOutput(true);
         urlConnection.connect();

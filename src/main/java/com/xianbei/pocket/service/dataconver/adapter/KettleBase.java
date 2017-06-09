@@ -1,7 +1,7 @@
 package com.xianbei.pocket.service.dataconver.adapter;
 
-import com.xianbei.pocket.domain.MysqlEntity;
-import com.xianbei.pocket.domain.RepositoryEntity;
+import com.xianbei.pocket.pojo.MysqlEntity;
+import com.xianbei.pocket.pojo.RepositoryEntity;
 import com.xianbei.pocket.service.dataconver.adapter.listener.JobListener;
 import org.pentaho.di.core.Result;
 import org.pentaho.di.core.database.DatabaseMeta;

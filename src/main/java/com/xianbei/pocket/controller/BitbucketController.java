@@ -1,6 +1,7 @@
 package com.xianbei.pocket.controller;
 
-import com.alibaba.fastjson.JSON;
+import com.xianbei.pocket.service.jenkins.JenkinsService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,15 +17,18 @@ import java.util.Map;
 @Controller
 @ResponseBody
 public class BitbucketController {
+    @Autowired
+    private JenkinsService jenkinsService;
+
     @RequestMapping("pocket_hook")
-    public Map pocket_hook( @RequestBody String rq, BindingResult bindingResult) {
+    public String pocket_hook( @RequestBody String rq, BindingResult bindingResult) {
         Map<String, Object> map = new HashMap<String, Object>();
-        System.out.println(rq);
         if (bindingResult.hasErrors()) {
             map.put("errorCode", "000001");
             map.put("errorMsg", bindingResult.getFieldError().getDefaultMessage());
         }
-        Map m = JSON.parseObject(rq,HashMap.class);
-        return m;
+
+        jenkinsService.triggerBuild(rq);
+        return "success";
     }
 }

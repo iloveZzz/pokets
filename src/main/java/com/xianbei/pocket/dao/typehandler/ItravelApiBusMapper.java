@@ -1,6 +1,6 @@
-package com.xianbei.pocket.typehandler;
+package com.xianbei.pocket.dao.typehandler;
 
-import com.xianbei.pocket.model.ItravelApiBusiness;
+import com.xianbei.pocket.entity.ItravelApiBusiness;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

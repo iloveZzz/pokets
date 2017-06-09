@@ -2,7 +2,6 @@ package com.xianbei.pocket.service.dataconver.command;
 
 import com.alibaba.fastjson.JSON;
 import com.xianbei.pocket.service.dataconver.adapter.KettleAdapter;
-import com.xianbei.pocket.domain.TaskFt;
 import com.xianbei.pocket.service.dataconver.task.tasks.KettleConciergeTask;
 import com.xianbei.pocket.service.dataconver.task.TaskManager;
 import org.slf4j.Logger;
