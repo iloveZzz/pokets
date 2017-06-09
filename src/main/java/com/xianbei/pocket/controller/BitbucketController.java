@@ -27,7 +27,6 @@ public class BitbucketController {
             map.put("errorCode", "000001");
             map.put("errorMsg", bindingResult.getFieldError().getDefaultMessage());
         }
-
         jenkinsService.triggerBuild(rq);
         return "success";
     }
