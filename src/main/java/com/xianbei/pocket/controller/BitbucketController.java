@@ -23,6 +23,6 @@ public class BitbucketController {
             map.put("errorCode", "000001");
             map.put("errorMsg", bindingResult.getFieldError().getDefaultMessage());
         }
-        return "buhao";
+        return rq;
     }
 }
