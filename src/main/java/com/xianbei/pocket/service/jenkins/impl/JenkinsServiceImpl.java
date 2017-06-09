@@ -39,6 +39,8 @@ public class JenkinsServiceImpl implements JenkinsService {
                         + "?token=" + job_map.get("job_token")
                         + "&" + job_map.get("job_param");
                 System.out.println(jenkinsUrl);
+                System.out.println(repo_name);
+                System.out.println(repo_full_name);
                 String rep_body=HttpUtil.getResponseBody(HttpUtil.createConnection(jenkinsUrl));
                 System.out.println(rep_body);
             }
