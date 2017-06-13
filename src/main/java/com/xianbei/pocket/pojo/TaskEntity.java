@@ -13,6 +13,7 @@ import java.util.Map;
 @Component
 @ConfigurationProperties(prefix = "task_list",locations = "file:config/kettle_task.yml")
 public class TaskEntity {
+
     private List<Map<String, String>> task = new ArrayList<>();
     private List<Map<String, String>> quartz = new ArrayList<>();
 
