@@ -4,6 +4,7 @@ package com.xianbei.pocket.pojo;
  * Created by zhudaoming on 2016/11/23.
  */
 public class TaskFt {
+
     private String rtCode;
     private String rtTime;
     private String rtPageSize;
