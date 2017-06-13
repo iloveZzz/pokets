@@ -8,6 +8,7 @@ public class ItravelApiBusiness {
     private String id;
 
     private String apiBusinessId;
+
     public String getId() {
         return id;
     }
