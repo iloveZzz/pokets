@@ -19,7 +19,6 @@ public class PocketMain {
 
     @Autowired
     private DataController dataController;
-
     @RequestMapping("/task")
     public void home(String key) {
         dataController.excTable(key);
