@@ -27,6 +27,7 @@ public class PocketMain {
     public static void main(String[] args) throws Exception {
         SpringApplication.run(PocketMain.class, args);
     }
+
     @Bean
     public EmbeddedServletContainerFactory servletContainer() {
         TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory();
