@@ -5,7 +5,7 @@ spring:
         password: xianbei_t1_dev
         driver: com.mysql.jdbc.Driver
 mybatis:
-    type-aliases-package: com.xianbei.pocket.model
+    type-aliases-package: com.xianbei.pocket.entity
     type-handlers-package: com.xianbei.pocket.dao.typehandler
     configuration:
         map-underscore-to-camel-case: true
