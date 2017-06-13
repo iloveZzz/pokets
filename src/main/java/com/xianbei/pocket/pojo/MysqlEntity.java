@@ -11,6 +11,7 @@ import java.io.Serializable;
 @Component
 @ConfigurationProperties(prefix = "mysql",locations = "classpath:kettle.properties")
 public class MysqlEntity implements Serializable{
+
     private String name;
     private String type;
     private String access;
