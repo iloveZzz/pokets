@@ -39,6 +39,7 @@ public class DataController {
     public void killALL() {
         commandKettle.killAll();
     }
+
     /**
      * 初始化方法
      */
